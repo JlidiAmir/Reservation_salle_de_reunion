@@ -28,7 +28,7 @@ Travailler au sein d’un espace de travail partagé permet de procurer plusieur
 
 ● Développer le réseau
 
-● Décrocher de nouvelles opportunités
+● Décrocher de nouvelles opportunites
 
 En outre, ces espaces proposent également des salles de réunions, un espace de détente, des rétroprojecteurs, une cuisine, un accès internet …
 En Tunisie, et au cours de la dernière décennie, les espaces de travail partagés sont multipliés notamment : Cogite Coworking Space, Work Zone Coworking Space, Hive 12, Startup Haus … Parmi les problèmes rencontrés par les propriétaires des coworking spaces, c’est la gestion des salles de réunion. On se trouve fréquemment dans des situations où on peut trouver des réservations simultannées ou des personnes qui dépassent la durée de réservation. C’est pourquoi, durant ce projet, on va proposer une plateforme web permettant aux propriétaires des espaces de travail partagés de mieux gérer les salles de réunion.
