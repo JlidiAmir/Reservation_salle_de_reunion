@@ -1,6 +1,0 @@
-   <meta name="description" content="réservation des salles de reunion" />
-    <meta
-      name="keywords"
-      content="  Coworking, Space , renting,   salle , réunion , travail , réservation ,espace ,zone ,reunion , reservation , reunio , sallie"
-    />
-    <meta name="author" content="Mohamed Iheb Ounalli,Mohamed Amir Jlidi" >
