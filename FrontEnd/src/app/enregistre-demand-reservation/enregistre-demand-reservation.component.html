@@ -1,0 +1,159 @@
+<section class="gradient-custom">
+  <div class="container py-3 h-100">
+    <app-search-bar [title]="'Enregister demande reservation'"></app-search-bar>
+    <div class="row mx-6 my-3">
+      <div class="col">
+        <div class="card">
+          <div class="table-responsive-lg mb-0">
+            <table
+              class="table align-middle mb-0 table-hover table-bordered"
+              style="background-color: aliceblue"
+            >
+              <thead class="bg-light">
+                <tr>
+                  <th>#</th>
+                  <th>Salle</th>
+                  <th>Date début</th>
+                  <th>Date fin</th>
+                  <th>Durée</th>
+                  <th>Matériels</th>
+                  <th>Prix</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>
+                    <div class="d-flex align-items-center">
+                      <div class="ms-3">
+                        <p class="fw-bold mb-1">salle reunion 1</p>
+                        <p class="text-muted mb-0">Department : IT</p>
+                      </div>
+                    </div>
+                  </td>
+
+                  <td>
+                    <input
+                      type="date"
+                      name="dd"
+                      id="date_deb"
+                      [(ngModel)]="dateDebRes"
+                    />
+                  </td>
+                  <td>
+                    <input
+                      type="date"
+                      name="df"
+                      id="date_fin"
+                      [(ngModel)]="dateFinRes"
+                    />
+                  </td>
+                  <td>{{ duree }}10 heures</td>
+                  <!-- <td>TV Projecteur Accès internet White board</td> -->
+                  <td>
+                    <input type="checkbox" name="cTV" id="" />
+                    <label for="cTV">TV</label> <br />
+                    <input type="checkbox" name="" id="" />
+                    <label for="cTV">Projecteur</label> <br />
+                    <input type="checkbox" name="" id="" />
+                    <label for="cTV">Accès internet</label> <br />
+                    <input type="checkbox" name="" id="" />
+                    <label for="cTV">White board</label>
+                  </td>
+                  <td>
+                    <p class="fw-bold mb-1">50 DT/Heures</p>
+                    <p class="text-muted mb-0">350 DT/Jour</p>
+                  </td>
+
+                  <td>
+                    <div class="row mx-5">
+                      <button
+                        (click)="changeDuree()"
+                        type="button"
+                        class="btn btn-success"
+                      >
+                        Réserver
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>
+                    <div class="d-flex align-items-center">
+                      <div class="ms-3">
+                        <p class="fw-bold mb-1">salle reunion 2</p>
+                        <p class="text-muted mb-0">Department : IT</p>
+                      </div>
+                    </div>
+                  </td>
+
+                  <td><input type="date" name="dd" id="date_deb" /></td>
+                  <td><input type="date" name="df" id="date_fin" /></td>
+                  <td>24 heures</td>
+                  <td>
+                    <input type="checkbox" name="cTV" id="" />
+                    <label for="cTV">TV</label> <br />
+                    <input type="checkbox" name="" id="" />
+                    <label for="cTV">Projecteur</label> <br />
+                    <input type="checkbox" name="" id="" />
+                    <label for="cTV">Accès internet</label> <br />
+                    <input type="checkbox" name="" id="" />
+                    <label for="cTV">White board</label>
+                  </td>
+                  <td>
+                    <p class="fw-bold mb-1">50 DT/Heures</p>
+                    <p class="text-muted mb-0">350 DT/Jour</p>
+                  </td>
+                  <td>
+                    <div class="row mx-5">
+                      <button type="button" class="btn btn-success">
+                        Réserver
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>
+                    <div class="d-flex align-items-center">
+                      <div class="ms-3">
+                        <p class="fw-bold mb-1">salle reunion 3</p>
+                        <p class="text-muted mb-0">Department : IT</p>
+                      </div>
+                    </div>
+                  </td>
+
+                  <td><input type="date" name="dd" id="date_deb" /></td>
+                  <td><input type="date" name="df" id="date_fin" /></td>
+                  <td>50 heures</td>
+                  <td>
+                    <input type="checkbox" name="cTV" id="" />
+                    <label for="cTV">TV</label> <br />
+                    <input type="checkbox" name="" id="" />
+                    <label for="cTV">Projecteur</label> <br />
+                    <input type="checkbox" name="" id="" />
+                    <label for="cTV">Accès internet</label> <br />
+                    <input type="checkbox" name="" id="" />
+                    <label for="cTV">White board</label>
+                  </td>
+                  <td>
+                    <p class="fw-bold mb-1">50 DT/Heures</p>
+                    <p class="text-muted mb-0">350 DT/Jour</p>
+                  </td>
+                  <td>
+                    <div class="row mx-5">
+                      <button type="button" class="btn btn-success">
+                        Réserver
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

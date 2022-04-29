@@ -1,0 +1,49 @@
+{{ model | json }}
+<div [hidden]="submited">
+  <form #dataModelForm="ngForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="name">Name</label>
+      <input
+        type="text"
+        name=""
+        id="name"
+        required
+        [(ngModel)]="model.name"
+        name="name"
+      />
+    </div>
+    <div>
+      <label for="lastname">Lastname</label>
+      <input
+        type="text"
+        name=""
+        id="lastname"
+        required
+        [(ngModel)]="model.lastName"
+        name="lastname"
+      />
+    </div>
+    <div>
+      <label for="hobbies">hobbie</label>
+      <select
+        name=""
+        id="hobbies"
+        required
+        [(ngModel)]="model.hobbies"
+        name="hobbies"
+      >
+        <option *ngFor="let hobbie of hobbies" [value]="hobbie">
+          {{ hobbie }}
+        </option>
+      </select>
+    </div>
+    <button [disabled]="!dataModelForm.form.valid" type="submit">Submit</button>
+  </form>
+</div>
+<div [hidden]="!submited">
+  <h2>You Submited:</h2>
+  <p>Name: {{ model.name }}</p>
+  <p>Lastname: {{ model.lastName }}</p>
+  <p>Hobbies: {{ model.hobbies }}</p>
+  <button (click)="submited = false">Edit</button>
+</div>

@@ -1,0 +1,6 @@
+<!-- Component communication : Input Management -->
+<app-child [message]="'Hello from parent'">
+  <p>Im ng-content written in parent component</p>
+</app-child>
+<!-- Component communication : Output Custom Event Management -->
+<app-child (childCustomEvent)="receiveChildMessage($event)"> </app-child>

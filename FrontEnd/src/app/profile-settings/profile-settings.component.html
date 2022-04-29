@@ -1,0 +1,107 @@
+<section class="gradient-custom">
+  <div class="container py-3 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col col-xl-10">
+        <div class="card" style="border-radius: 1rem">
+          <div class="row g-0">
+            <div class="col-md-6 col-lg-5 d-none d-md-flex">
+              <img
+                src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/img4.webp"
+                alt="formulaire de inscription"
+                class="img-fluid"
+                style="border-radius: 1rem 0 0 1rem"
+              />
+            </div>
+            <div class="col-md-6 col-lg-7 d-flex align-items-center">
+              <div class="card-body p-4 p-lg-5 text-black">
+                <div class="d-flex align-items-center mb-3 pb-1">
+                  <i class="fas fa-cubes fa-2x me-3" style="color: #ff6219"></i>
+                  <span class="h1 fw-bold mb-0"> Parametres de Profile</span>
+                </div>
+                <form (ngSubmit)="onSubmit(param)" autocomplete="off">
+                  <div class="row">
+                    <div class="col-md-6 mb-4">
+                      <div class="form-outline">
+                        <input
+                          type="text"
+                          id="form-NU"
+                          class="form-control form-control-lg"
+                          name="idProfile"
+                          [value]="profile.idProfile"
+                        />
+                        <label class="form-label" for="form-NU"
+                          >ID Profile</label
+                        >
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                      <div class="form-outline">
+                        <input
+                          type="text"
+                          id="form-NT"
+                          class="form-control form-control-lg"
+                          name="role"
+                          [(ngModel)]="profile.role"
+                        />
+                        <label class="form-label" for="form-NT">Role</label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-outline mb-4">
+                    <input
+                      type="email"
+                      id="form2Example17"
+                      class="form-control form-control-lg"
+                      autocomplete="off"
+                      name="email"
+                      [(ngModel)]="profile.email"
+                    />
+                    <label class="form-label" for="form2Example17"
+                      >Email address</label
+                    >
+                  </div>
+
+                  <div class="form-outline mb-4">
+                    <input
+                      type="text"
+                      id="form2Example27"
+                      class="form-control form-control-lg"
+                      required
+                      autocomplete="off"
+                      name="mdp"
+                      [(ngModel)]="profile.mdp"
+                    />
+                    <label class="form-label" for="form2Example27"
+                      >Mot de passe</label
+                    >
+                  </div>
+                  <div class="row">
+                    <div class="col pt-1 mb-4">
+                      <button
+                        class="btn btn-dark btn-lg btn-block"
+                        type="submit"
+                        (click)="onSubmit('update')"
+                      >
+                        Modifier Profile
+                      </button>
+                    </div>
+                    <div class="col pt-1 mb-4">
+                      <button
+                        class="btn btn-dark btn-lg btn-block"
+                        type="button"
+                        (click)="onSubmit('delete')"
+                      >
+                        Supprimer Profile
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

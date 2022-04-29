@@ -1,0 +1,142 @@
+<section class="gradient-custom">
+  <div class="container py-3 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col col-xl-10">
+        <div class="card" style="border-radius: 1rem">
+          <div class="row g-0">
+            <div class="col-md-6 col-lg-5 d-none d-md-flex">
+              <img
+                src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/img4.webp"
+                alt="formulaire de inscription"
+                class="img-fluid"
+                style="border-radius: 1rem 0 0 1rem"
+              />
+            </div>
+            <div class="col-md-6 col-lg-7 d-flex align-items-center">
+              <div class="card-body p-4 p-lg-5 text-black">
+                <form
+                  [formGroup]="angForm"
+                  (ngSubmit)="postdata(angForm)"
+                  autocomplete="off"
+                >
+                  <div class="d-flex align-items-center mb-3 pb-1">
+                    <i
+                      class="fas fa-cubes fa-2x me-3"
+                      style="color: #ff6219"
+                    ></i>
+                    <span class="h1 fw-bold mb-0"> S'inscrire</span>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-6 mb-4">
+                      <div class="form-outline">
+                        <input
+                          type="text"
+                          id="form3Example1m"
+                          class="form-control form-control-lg"
+                        />
+                        <label class="form-label" for="form3Example1m"
+                          >Nom</label
+                        >
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                      <div class="form-outline">
+                        <input
+                          type="text"
+                          id="form3Example1n"
+                          class="form-control form-control-lg"
+                        />
+                        <label class="form-label" for="form3Example1n"
+                          >Prénom</label
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6 mb-4">
+                      <div class="form-outline">
+                        <input
+                          type="text"
+                          id="form-NU"
+                          class="form-control form-control-lg"
+                        />
+                        <label class="form-label" for="form-NU"
+                          >Nom d'utilisateur</label
+                        >
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                      <div class="form-outline">
+                        <input
+                          type="text"
+                          id="form-NT"
+                          class="form-control form-control-lg"
+                        />
+                        <label class="form-label" for="form-NT">Num Tél</label>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- <div class="row">
+                    <div class="col-md-6 mb-4"></div>
+                    <div class="md-form">
+                      <input
+                        placeholder="Selected date"
+                        type="date"
+                        id="date-picker-example"
+                        class="form-control datepicker"
+                      />
+                      <label for="date-picker-example" class="active"
+                        >Date de naissance
+                      </label>
+                    </div>
+                    <div class="col-md-6 mb-4"></div>
+                  </div> -->
+
+                  <div class="form-outline mb-4">
+                    <input
+                      type="email"
+                      id="form2Example17"
+                      class="form-control form-control-lg"
+                      formControlName="email"
+                      autocomplete="off"
+                    />
+                    <label class="form-label" for="form2Example17"
+                      >Email address</label
+                    >
+                  </div>
+
+                  <div class="form-outline mb-4">
+                    <input
+                      type="password"
+                      id="form2Example27"
+                      class="form-control form-control-lg"
+                      required
+                      formControlName="password"
+                      autocomplete="off"
+                    />
+                    <label class="form-label" for="form2Example27"
+                      >Password</label
+                    >
+                  </div>
+
+                  <div class="pt-1 mb-4">
+                    <button
+                      [disabled]="angForm.invalid"
+                      class="btn btn-dark btn-lg btn-block"
+                      type="submit"
+                    >
+                      S'inscrire
+                    </button>
+                  </div>
+                  <a href="#!" class="small text-muted">Terms of use.</a>
+                  <a href="#!" class="small text-muted">Privacy policy</a>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
