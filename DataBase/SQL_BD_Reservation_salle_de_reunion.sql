@@ -8,19 +8,19 @@ SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
 
 -- -----------------------------------------------------
--- Schema mydb
+-- Schema reservation_sr
 -- -----------------------------------------------------
 
 -- -----------------------------------------------------
--- Schema mydb
+-- Schema reservation_sr
 -- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `mydb` DEFAULT CHARACTER SET utf8 ;
-USE `mydb` ;
+CREATE SCHEMA IF NOT EXISTS `reservation_sr` DEFAULT CHARACTER SET utf8 ;
+USE `reservation_sr` ;
 
 -- -----------------------------------------------------
--- Table `mydb`.`Client`
+-- Table `reservation_sr`.`Client`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`Client` (
+CREATE TABLE IF NOT EXISTS `reservation_sr`.`Client` (
   `idClient` INT NOT NULL AUTO_INCREMENT,
   `nom` VARCHAR(45) NULL,
   `prenom` VARCHAR(45) NULL,
@@ -30,9 +30,9 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`Salle`
+-- Table `reservation_sr`.`Salle`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`Salle` (
+CREATE TABLE IF NOT EXISTS `reservation_sr`.`Salle` (
   `idSalle` INT NOT NULL,
   `nomSalle` VARCHAR(45) NULL,
   `surface` VARCHAR(45) NULL,
@@ -42,9 +42,9 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`Profile`
+-- Table `reservation_sr`.`Profile`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`Profile` (
+CREATE TABLE IF NOT EXISTS `reservation_sr`.`Profile` (
   `idProfile` INT NOT NULL AUTO_INCREMENT,
   `email` VARCHAR(45) NULL,
   `mdp` VARCHAR(45) NULL,
@@ -54,16 +54,16 @@ CREATE TABLE IF NOT EXISTS `mydb`.`Profile` (
   INDEX `fk_Profile_Client1_idx` (`Client_idClient` ASC) VISIBLE,
   CONSTRAINT `fk_Profile_Client1`
     FOREIGN KEY (`Client_idClient`)
-    REFERENCES `mydb`.`Client` (`idClient`)
+    REFERENCES `reservation_sr`.`Client` (`idClient`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`Materiel`
+-- Table `reservation_sr`.`Materiel`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`Materiel` (
+CREATE TABLE IF NOT EXISTS `reservation_sr`.`Materiel` (
   `idMateriel` INT NOT NULL,
   `Nom` VARCHAR(45) NULL,
   `Type` VARCHAR(45) NULL,
@@ -72,16 +72,16 @@ CREATE TABLE IF NOT EXISTS `mydb`.`Materiel` (
   INDEX `fk_Materiel_Salle1_idx` (`Salle_idSalle` ASC) VISIBLE,
   CONSTRAINT `fk_Materiel_Salle1`
     FOREIGN KEY (`Salle_idSalle`)
-    REFERENCES `mydb`.`Salle` (`idSalle`)
+    REFERENCES `reservation_sr`.`Salle` (`idSalle`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`DateReservation`
+-- Table `reservation_sr`.`DateReservation`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`DateReservation` (
+CREATE TABLE IF NOT EXISTS `reservation_sr`.`DateReservation` (
   `idDateReservation` INT NOT NULL AUTO_INCREMENT,
   `DateDebut` DATE NULL,
   `DateFin` DATE NULL,
@@ -91,9 +91,9 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`Reservation`
+-- Table `reservation_sr`.`Reservation`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`Reservation` (
+CREATE TABLE IF NOT EXISTS `reservation_sr`.`Reservation` (
   `idReservation` INT NOT NULL AUTO_INCREMENT,
   `prix` VARCHAR(45) NULL,
   `Client_idClient` INT NOT NULL,
@@ -105,7 +105,7 @@ CREATE TABLE IF NOT EXISTS `mydb`.`Reservation` (
   INDEX `fk_Reservation_DateReservation1_idx` (`DateReservation_idDateReservation` ASC) VISIBLE,
   CONSTRAINT `fk_Reservation_Client1`
     FOREIGN KEY (`Client_idClient`)
-    REFERENCES `mydb`.`Client` (`idClient`)
+    REFERENCES `reservation_sr`.`Client` (`idClient`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_Reservation_Salle1`
